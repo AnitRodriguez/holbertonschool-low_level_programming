@@ -2,7 +2,7 @@
 /**
  *print_last_digit - Checker
  *
- *@x: variable
+ *@o: variable
  *Return: The value of the last digit
  */
 int print_last_digit(int o)
