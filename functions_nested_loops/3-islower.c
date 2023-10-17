@@ -13,6 +13,6 @@ int lowercase = 0;
 
 for (o = 'a'; o <= 'z'; o++)
 	if (o == c)
-			lowercase = 1;
+		lowercase = 1;
 return (lowercase);
 }
