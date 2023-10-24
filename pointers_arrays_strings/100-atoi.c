@@ -1,7 +1,7 @@
 #include "main.h"
 /**
 *_atoi - Checker
-*@s; Check
+*@s: Check
 *Return: If there are no numbers in the string, the function must return 0
 */
 int _atoi(char *s)
