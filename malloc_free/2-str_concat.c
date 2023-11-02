@@ -15,38 +15,36 @@ char *str_concat(char *s1, char *s2)
 
 	y = s1;
 	z = s2;
+
 	if (s1 == NULL)
 		s1 = "";
-	while (*s1)
+	while (s1[b] != '\0')
 	{
 		b++;
-		s1++;
 	}
+
 	s1 = y;
+
 	if (s2 == NULL)
-		s2++;
-	while (*s2)
+		s2 = "";
+	while (s2[c] != '\0')
 	{
 		c++;
-		s2++;
 	}
+
 	s2 = z;
-	x = malloc(sizeof(char) * (b + c + 1));
+	x = (char *)malloc(sizeof(char) * (b + c + 1));
 	y = x;
+
 	if (x == NULL)
 		return (NULL);
+
 	for (; a < (b + c); a++)
 	{
 		if (a < b)
-		{
-			x[a] = *s1;
-			s1++;
-		}
+			x[a] = s1[a];
 		else
-		{
-			x[a] = *s2;
-			s2++;
-		}
+			x[a] = s2[a - b];
 	}
 	x[a] = '\0';
 	return (y);
