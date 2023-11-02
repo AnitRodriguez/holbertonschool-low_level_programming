@@ -30,24 +30,24 @@ char *str_concat(char *s1, char *s2)
 		c++;
 		s2++;
 	}
-s2 = z;
-x = malloc(sizeof(char) * (b + c + 1));
-y = x;
-if (x == NULL)
-	return (NULL);
-for (; a < (b + c); a++)
-{
-	if (a < b)
+	s2 = z;
+	x = malloc(sizeof(char) * (b + c + 1));
+	y = x;
+	if (x == NULL)
+		return (NULL);
+	for (; a < (b + c); a++)
 	{
-		x[a] = *s1;
-		s1++;
+		if (a < b)
+		{
+			x[a] = *s1;
+			s1++;
+		}
+		else
+		{
+			x[a] = *s2;
+			s2++;
+		}
 	}
-	else
-	{
-		x[a] = *s2;
-		s2++;
-	}
-}
 	x[a] = '\0';
 	return (y);
 }
